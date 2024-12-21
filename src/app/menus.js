@@ -8,7 +8,7 @@ var Menus = {
     var title = TextGen.generateWord('lost treasure');
     TextGen.titleText(title);
 
-    var madeBy = TextGen.generateWord('by bhaumic');
+    var madeBy = TextGen.generateWord('by origin games');
     TextGen.madeByText(madeBy);
   },
   showIntroScreen: () => {
@@ -36,7 +36,7 @@ var Menus = {
     var completed = TextGen.generateWord('gems are on safe');
     TextGen.text(completed, 'endGameSubtitle', 305, { scale: 4, margin: 15 });
 
-    var madeBy = TextGen.generateWord('by bhaumic');
+    var madeBy = TextGen.generateWord('by origin games');
     TextGen.madeByText(madeBy);
   },
   addEndScreen: () => {
