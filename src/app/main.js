@@ -2,6 +2,8 @@ import { setup, frame, win, onkey } from './game';
 import { levels } from './maps/levels';
 import { Utils } from './utils';
 import { Menus } from './menus';
+import { AuthForms } from './auth_forms';
+import { AuthService } from './auth';
 
 if (!window.requestAnimationFrame) {
   window.requestAnimationFrame = window.webkitRequestAnimationFrame ||
@@ -17,7 +19,13 @@ var life = 3;
 var currentLvl = 0;
 var inProgress = false;
 
-function init() {
+export function init() {
+  const user = localStorage.getItem('user');
+  if (!user) {
+    AuthForms.showLogin();
+    return;
+  }
+
   Menus.addEndScreen();
   Menus.startScreen();
 }
@@ -74,6 +82,8 @@ function finishCurrentLvl() {
   }
 
   currentLvl++;
+  // Save progress
+  AuthService.saveProgress(currentLvl).catch(console.error);
 
   setTimeout(() => {
     showPreLevelScreen();

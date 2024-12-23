@@ -2,43 +2,43 @@ import { font } from './constants';
 
 var TextGen = {
   mapping: {
-    'a': 0,
-    'b': 3,
-    'c': 6,
-    'd': 9,
-    'e': 12,
-    'f': 15,
-    'g': 18,
-    'h': 21,
-    'i': 24,
-    'j': 27,
-    'k': 30,
-    'l': 33,
-    'm': 36,
-    'n': 39,
-    'o': 42,
-    'p': 45,
-    'q': 48,
-    'r': 51,
-    's': 54,
-    't': 57,
-    'u': 60,
-    'v': 63,
-    'w': 66,
-    'x': 69,
-    'y': 72,
-    'z': 75,
-    '0': 78,
-    '1': 81,
-    '2': 84,
-    '3': 87,
-    '4': 90,
-    '5': 93,
-    '6': 96,
-    '7': 99,
-    '8': 102,
-    '9': 105,
-    ' ': 108
+    a: 0,
+    b: 3,
+    c: 6,
+    d: 9,
+    e: 12,
+    f: 15,
+    g: 18,
+    h: 21,
+    i: 24,
+    j: 27,
+    k: 30,
+    l: 33,
+    m: 36,
+    n: 39,
+    o: 42,
+    p: 45,
+    q: 48,
+    r: 51,
+    s: 54,
+    t: 57,
+    u: 60,
+    v: 63,
+    w: 66,
+    x: 69,
+    y: 72,
+    z: 75,
+    0: 78,
+    1: 81,
+    2: 84,
+    3: 87,
+    4: 90,
+    5: 93,
+    6: 96,
+    7: 99,
+    8: 102,
+    9: 105,
+    ' ': 108,
   },
   generateWord: (text) => {
     var l = text.length;
@@ -54,7 +54,10 @@ var TextGen = {
     var mainBlock = document.getElementById('renders');
     var div = document.createElement('div');
 
-    div.setAttribute('style', 'position: absolute; top: 40px; right: 0; left: 0; margin: auto; width: 460px; height: 28px;')
+    div.setAttribute(
+      'style',
+      'position: absolute; top: 40px; right: 0; left: 0; margin: auto; width: 460px; height: 28px;'
+    );
     div.id = 'titleText';
 
     mainBlock.appendChild(div);
@@ -68,7 +71,10 @@ var TextGen = {
     var mainBlock = document.getElementById('renders');
     var div = document.createElement('div');
 
-    div.setAttribute('style', 'position: absolute; bottom: 30px; right: 0; left: 0; margin: auto; width: 130px; height: 28px;')
+    div.setAttribute(
+      'style',
+      'position: absolute; bottom: 30px; right: 0; left: 0; margin: auto; width: 130px; height: 28px;'
+    );
     div.id = 'madeByText';
 
     mainBlock.appendChild(div);
@@ -95,7 +101,14 @@ var TextGen = {
         break;
     }
 
-    div.setAttribute('style', 'position: absolute; ' + pos + ' right: 0; left: 0; margin: auto; width: ' + width + 'px; height: 28px;')
+    div.setAttribute(
+      'style',
+      'position: absolute; ' +
+        pos +
+        ' right: 0; left: 0; margin: auto; width: ' +
+        width +
+        'px; height: 28px;'
+    );
     div.id = id;
 
     mainBlock.appendChild(div);
@@ -109,7 +122,10 @@ var TextGen = {
     var mainBlock = document.getElementById('renders');
     var div = document.createElement('div');
 
-    div.setAttribute('style', 'position: absolute; top: 0; right: 0; left: 0; bottom: 0; margin: auto; width: 355px; height: 28px; opacity: 1; animation: fadeinout 1s infinite;')
+    div.setAttribute(
+      'style',
+      'position: absolute; top: 0; right: 0; left: 0; bottom: 0; margin: auto; width: 355px; height: 28px; opacity: 1; animation: fadeinout 1s infinite;'
+    );
     div.id = id;
 
     mainBlock.appendChild(div);
@@ -123,7 +139,12 @@ var TextGen = {
     var mainBlock = document.getElementById('renders');
     var div = document.createElement('div');
 
-    div.setAttribute('style', 'position: absolute; top: 0; right: 0; left: 0; bottom: 0; margin: auto; width: ' + width + 'px; height: 28px;')
+    div.setAttribute(
+      'style',
+      'position: absolute; top: 0; right: 0; left: 0; bottom: 0; margin: auto; width: ' +
+        width +
+        'px; height: 28px;'
+    );
     div.id = id;
 
     mainBlock.appendChild(div);
@@ -137,7 +158,10 @@ var TextGen = {
     var mainBlock = document.getElementById('renders');
     var div = document.createElement('div');
 
-    div.setAttribute('style', 'position: absolute; top: 100px; right: 0; left: 0; margin: auto; width: 450px; height: 28px;')
+    div.setAttribute(
+      'style',
+      'position: absolute; top: 100px; right: 0; left: 0; margin: auto; width: 450px; height: 28px;'
+    );
     div.id = 'endGameTitle';
 
     mainBlock.appendChild(div);
@@ -149,9 +173,69 @@ var TextGen = {
   },
   createSpan: (val, scale = 1, margin = 0) => {
     var div = document.createElement('div');
-    div.setAttribute('style', 'transform: scale(' + scale + '); margin-left: ' + margin + 'px; image-rendering: pixelated; image-rendering: optimizespeed; image-rendering: crisp-edges; display: inline-block; height: 5px; width: 3px; background: url(' + font + ') -' + val + 'px 0;');
+    div.setAttribute(
+      'style',
+      'transform: scale(' +
+        scale +
+        '); margin-left: ' +
+        margin +
+        'px; image-rendering: pixelated; image-rendering: optimizespeed; image-rendering: crisp-edges; display: inline-block; height: 5px; width: 3px; background: url(' +
+        font +
+        ') -' +
+        val +
+        'px 0;'
+    );
     return div;
-  }
+  },
+  // Add to existing TextGen object
+  formInput: (placeholder, id, top) => {
+    var mainBlock = document.getElementById('renders');
+    var input = document.createElement('input');
+    var label = document.createElement('div');
+
+    label.setAttribute(
+      'style',
+      `position: absolute; top: ${top}px; right: 0; left: 0; margin: auto; width: 200px;`
+    );
+    TextGen.generateWord(placeholder).forEach((el) => {
+      var span = TextGen.createSpan(el, 2, 5);
+      label.appendChild(span);
+    });
+
+    input.setAttribute(
+      'style',
+      `position: absolute; top: ${
+        top + 30
+      }px; right: 0; left: 0; margin: auto; width: 200px; padding: 5px;`
+    );
+    input.setAttribute('id', id);
+    input.setAttribute(
+      'type',
+      placeholder.includes('password') ? 'password' : 'text'
+    );
+
+    mainBlock.appendChild(label);
+    mainBlock.appendChild(input);
+  },
+
+  formButton: (text, id, top, onClick) => {
+    var mainBlock = document.getElementById('renders');
+    var button = document.createElement('button');
+
+    button.setAttribute(
+      'style',
+      `position: absolute; top: ${top}px; right: 0; left: 0; margin: auto; width: 200px; padding: 10px;`
+    );
+    button.setAttribute('id', id);
+    button.onclick = onClick;
+
+    TextGen.generateWord(text).forEach((el) => {
+      var span = TextGen.createSpan(el, 2, 5);
+      button.appendChild(span);
+    });
+
+    mainBlock.appendChild(button);
+  },
 };
 
 export { TextGen };
