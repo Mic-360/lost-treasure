@@ -37,6 +37,31 @@ body {
   display: block;
 }
 
+input {
+  background: #111;
+  color: #fff;
+  font-family: monospace;
+  font-size: 16px;
+  outline: none;
+}
+
+button {
+  background: transparent;
+  color: #fff;
+  font-family: monospace;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: rgba(72, 61, 139, 0.2);
+}
+
+button:active {
+  background: rgba(72, 61, 139, 0.4);
+  transform: scale(0.98);
+}
+
 @keyframes fadeinout {
   0% {
     opacity: 0;
