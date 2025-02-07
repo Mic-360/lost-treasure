@@ -12,7 +12,7 @@ const Menus = {
     const title = TextGen.generateWord('lost treasure');
     TextGen.titleText(title);
 
-    const madeBy = TextGen.generateWord('by origin games');
+    const madeBy = TextGen.generateWord('by bhaumic');
     TextGen.madeByText(madeBy);
   },
   showIntroScreen: () => {

@@ -29,11 +29,11 @@ let inProgress = false;
  * Initializes the game by checking authentication and showing the start screen.
  */
 export function init() {
-  const user = localStorage.getItem('user');
-  if (!user) {
-    AuthForms.showLogin();
-    return;
-  }
+  // const user = localStorage.getItem('user');
+  // if (!user) {
+  //   AuthForms.showLogin();
+  //   return;
+  // }
   Menus.addEndScreen();
   Menus.startScreen();
 }
